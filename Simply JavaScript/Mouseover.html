@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            border-radius: 30px;
+            transition: all 1s;
+        }
+
+        .increment {
+            width: 500px;
+            height: 500px;
+        }
+
+        .decrement {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div> </div>
+
+    <script>
+        const box = document.querySelector("div"); // Use 'box' consistently
+
+        // Increase the size of the box
+        function incHandler() {
+            box.classList.add("increment"); // Use 'box' instead of 'div'
+            box.classList.remove("decrement");
+        }
+
+        // Decrease the size of the box
+        function decHandler() {
+            box.classList.add("decrement");
+            box.classList.remove("increment");
+        }
+
+        // Add event listeners without calling the functions directly
+        box.addEventListener("mouseover", incHandler);
+        box.addEventListener("mouseout", decHandler);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <script>
+        function converter() {
+            // Get the value entered by the user
+            let celsius = document.getElementById("EnterTemp").value;
+
+            // Convert Celsius to Fahrenheit
+            let fahrenheit = (celsius * 9 / 5) + 32;
+
+            // Display the result in an alert or in the HTML
+            alert(celsius + "°C is equal to " + fahrenheit + "°F");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Convert Celsius to Fahrenheit</h1>
+
+    <!-- Input for Celsius temperature -->
+    <input type="number" id="EnterTemp" placeholder="Temperature in Celsius">
+
+    <!-- Button to trigger the conversion -->
+    <button onclick="converter()">Submit</button>
+</body>
+
+</html>

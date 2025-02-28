@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Actions</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        #text {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        // Function to change the background color
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "pink";
+        }
+
+        // Function to change the text style
+        function changeTextStyle() {
+            const textElement = document.getElementById("text");
+            textElement.style.fontStyle = "italic"; // Change to italic
+            textElement.style.fontWeight = "bold"; // Change to bold
+        }
+
+        // Function to change the text color
+        function changeTextColor() {
+            const textElement = document.getElementById("text");
+            textElement.style.color = "blue"; // Change to blue
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Button Actions Example</h1>
+    <p id="text">Click the buttons below to see changes!</p>
+
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <button onclick="changeTextStyle()">Change Text Style</button>
+    <button onclick="changeTextColor()">Change Text Color</button>
+</body>
+
+</html>

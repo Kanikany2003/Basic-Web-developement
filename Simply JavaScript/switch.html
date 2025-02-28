@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkGrade() {
+            let grade = document.getElementById("GradeInput").value;
+
+            if (grade >= 90) {
+                alert("A+");
+            }
+            else if (grade >= 80 && grade < 90) {
+                alert("A");
+            }
+            else if (grade >= 70 && grade < 80) {
+                alert("B+");
+            }
+            else if (grade >= 60 && grade < 70) {
+                alert("B");
+            }
+            else if (grade >= 50 && grade < 60) {
+                alert("C");
+            }
+            else if (grade < 50 && grade > 0) {
+                alert('F"');
+            }
+            else {
+                alert("default");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="GradeInput" placeholder="Enter Grade">
+    <button onclick="checkGrade()">Submit</button>
+</body>
+
+</html>

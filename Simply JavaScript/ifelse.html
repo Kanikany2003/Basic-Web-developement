@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript if-else Example</title>
+    <script>
+        function checkNumber() {
+            let number = document.getElementById("inputNumber").value;  // Get input value
+
+            if (number > 0) {
+                alert("The number is positive.");
+            } else if (number < 0) {
+                alert("The number is negative.");
+            } else {
+                alert("The number is zero.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Check if a Number is Positive, Negative, or Zero</h1>
+    <input type="number" id="inputNumber" placeholder="Enter a number">
+    <button onclick="checkNumber()">Check</button>
+</body>
+
+</html>

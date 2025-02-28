@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        * {
+            text-align: center;
+            justify-content: center;
+            background-color: #e5e5e5;
+        }
+
+        h1 {
+            color: #403d39;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            margin: 20px;
+            background-color: azure;
+            border: solid #003049;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3a86ff;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guess the Number Game</h1>
+    <input type="number" id="number_input" placeholder="Guess a number from 1-100">
+    <br>
+    <button onclick="guess_no()">Guess</button>
+    <p id="result"></p>
+
+    <script>
+        let random_no = Math.floor(Math.random() * 100) + 1;
+
+        function guess_no() {
+            let number = parseInt(document.getElementById("number_input").value);
+            let resultText = "";
+            let resultElement = document.getElementById("result");
+
+            if (isNaN(number)) {
+                resultText = "Please enter a valid number.";
+                resultElement.style.color = "red";
+            } else if (number === random_no) {
+                resultText = "Correct number!";
+                resultElement.style.color = "green";
+            } else if (number < random_no) {
+                resultText = "Too low! Try again.";
+                resultElement.style.color = "red";
+            } else if (number > random_no) {
+                resultText = "Too high! Try again.";
+                resultElement.style.color = "red";
+            }
+
+            resultElement.innerText = resultText;
+        }
+    </script>
+</body>
+
+</html>
